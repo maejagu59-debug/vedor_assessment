@@ -120,7 +120,7 @@
   - [ ] 7.2 StatisticsSummary 컴포넌트
     - TotalCountCard (전체 공급업체 수)
     - AverageScoreCard (평균 안전 점수)
-    - GradeDistributionCard (등급 분포 A/B/C/D)
+    - GradeDistributionCard (안전등급 A/B/C/D)
 
     - 카드 레이아웃 및 스타일링
     - _Requirements: 2.1, 2.2, 2.3, 2.4_

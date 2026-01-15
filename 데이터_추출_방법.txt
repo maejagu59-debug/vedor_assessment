@@ -1,0 +1,48 @@
+========================================
+로컬 데이터 추출 및 배포 방법
+========================================
+
+1단계: 로컬 서버 실행
+-----------------------
+새 터미널(cmd)을 열고:
+> npm run dev
+
+서버가 시작될 때까지 기다리기 (약 10초)
+
+
+2단계: 브라우저에서 데이터 추출
+-----------------------
+1. 브라우저에서 http://localhost:5173 접속
+2. F12 키 누르기 (개발자 도구)
+3. "Console" 탭 선택
+4. "extract-data-script.js" 파일 열기
+5. 전체 내용 복사 (Ctrl+A, Ctrl+C)
+6. 콘솔에 붙여넣기 (Ctrl+V)
+7. Enter 키 누르기
+8. "initial-data.json" 파일이 다운로드됩니다!
+
+
+3단계: 파일 복사
+-----------------------
+다운로드한 "initial-data.json" 파일을
+프로젝트의 "public" 폴더에 복사
+
+
+4단계: 배포
+-----------------------
+터미널에서:
+> git add public\initial-data.json
+> git add src\utils\DataExporter.ts
+> git add src\contexts\AppContext.tsx
+> git add src\pages\AdminPage.tsx
+> git commit -m "Add: 초기 데이터 추가"
+> git push origin main
+
+또는 배치 파일 실행:
+> update-initial-data.bat
+
+
+완료!
+-----------------------
+약 5분 후 배포된 사이트에서
+모든 사용자가 데이터를 볼 수 있습니다.
