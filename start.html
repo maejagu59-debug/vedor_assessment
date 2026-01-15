@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공급업체 분석 보고서 - 시작</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+        .button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .instructions {
+            background: #f7fafc;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .instructions h3 {
+            color: #333;
+            margin-top: 0;
+        }
+        .instructions ol {
+            color: #666;
+            line-height: 1.8;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏢 공급업체 분석 보고서</h1>
+        <p>CSV 파일을 업로드하여 공급업체에 대한 전문가 수준의 분석 보고서를 자동으로 생성합니다.</p>
+        
+        <a href="#" class="button" onclick="startApp(); return false;">앱 시작하기</a>
+        
+        <div class="instructions">
+            <h3>📋 사용 방법</h3>
+            <ol>
+                <li><strong>앱 시작하기</strong> 버튼을 클릭합니다</li>
+                <li>개발 서버가 자동으로 시작됩니다</li>
+                <li>브라우저에서 자동으로 앱이 열립니다</li>
+                <li>CSV 파일을 업로드하여 분석을 시작합니다</li>
+            </ol>
+            
+            <div class="note">
+                <strong>⚠️ 주의사항:</strong><br>
+                • Node.js가 설치되어 있어야 합니다<br>
+                • 처음 실행 시 npm install이 필요합니다<br>
+                • 샘플 데이터는 sample-data.csv 파일을 사용하세요
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function startApp() {
+            alert('명령 프롬프트(CMD)를 열고 다음 명령어를 실행하세요:\n\n1. npm install\n2. npm run dev\n\n그 후 브라우저에서 http://localhost:5173 을 열어주세요.');
+        }
+    </script>
+</body>
+</html>

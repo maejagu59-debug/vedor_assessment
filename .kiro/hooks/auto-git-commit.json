@@ -1,0 +1,13 @@
+{
+  "name": "Auto Git Commit",
+  "description": "파일 저장 시 자동으로 Git에 커밋하고 푸시합니다",
+  "trigger": {
+    "type": "onFileSave",
+    "filePattern": "**/*.{ts,tsx,js,jsx,css,html,json,md}"
+  },
+  "action": {
+    "type": "command",
+    "command": "auto-commit.bat"
+  },
+  "enabled": true
+}
