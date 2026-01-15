@@ -71,10 +71,10 @@ const StatisticsSummary: React.FC = () => {
           </div>
         ))}
 
-        {/* 등급 분포 카드 */}
+        {/* 안전등급 분포 카드 */}
         <div className="lg:col-span-2 bg-white overflow-hidden shadow rounded-lg">
           <div className="p-5">
-            <h3 className="text-sm font-medium text-gray-500 mb-3">등급 분포</h3>
+            <h3 className="text-sm font-medium text-gray-500 mb-3">안전등급 분포</h3>
             <div className="grid grid-cols-5 gap-2">
               {(['S', 'A', 'B', 'C', 'D'] as const).map(grade => (
                 <div key={grade} className="text-center">
