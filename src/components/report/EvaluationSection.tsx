@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { EvaluationData } from '../../types';
 import { EvaluationAnalysisGenerator } from '../../utils/EvaluationAnalysisGenerator';
 import { useApp } from '../../contexts/AppContext';
+import SustainabilityDetailsView from './SustainabilityDetailsView';
 
 interface EvaluationSectionProps {
   evaluation: EvaluationData;
@@ -566,52 +567,10 @@ const EvaluationSection: React.FC<EvaluationSectionProps> = ({ evaluation, allEv
 
             {/* 지속가능성 세부 항목 */}
             {evaluation.sustainability_details?.items && (
-              <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <h5 className="text-sm font-medium text-gray-900 mb-3">지속가능성 세부 항목</h5>
-                <div className="space-y-2">
-                  {Object.entries(evaluation.sustainability_details.items).map(([key, value]) => {
-                    const score = Number(value);
-                    const labels: Record<string, string> = {
-                      adequatePersonnel: '적정 인력',
-                      contractSupport: '계약 지원',
-                      damagePrevention: '사고 예방',
-                      directiveCompliance: '지시 준수',
-                      emergencyResponse: '비상 대응',
-                      performanceAmount: '실적 규모',
-                      performanceCount: '실적 건수',
-                      regulationCompliance: '법규 준수',
-                      safetyService: '안전 서비스',
-                      serviceQuality: '서비스 품질',
-                      turnoverRate: '이직률 관리',
-                      claimFrequency: '클레임 빈도',
-                      deliveryMgmt: '납기 관리',
-                      durability: '내구성',
-                      productVariety: '제품 다양성',
-                      qualityMgmt: '품질 관리',
-                      quotationDelay: '견적 지연',
-                      specResponse: '사양 대응',
-                      timelyDelivery: '정시 납품',
-                      urgentResponse: '긴급 대응',
-                    };
-                    return (
-                      <div key={key} className="flex items-center justify-between">
-                        <span className="text-xs text-gray-700">{labels[key] || key}</span>
-                        <div className="flex items-center gap-2">
-                          <div className="w-24 bg-gray-200 rounded-full h-2">
-                            <div
-                              className="h-2 rounded-full"
-                              style={{ width: `${(score / 5) * 100}%`, backgroundColor: '#0085FF' }}
-                            />
-                          </div>
-                          <span className="text-xs font-semibold text-gray-900 w-8 text-right">
-                            {score.toFixed(1)}
-                          </span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+              <SustainabilityDetailsView 
+                items={evaluation.sustainability_details.items}
+                supplierGroup={evaluation.supplier_group}
+              />
             )}
           </div>
         )}
