@@ -36,7 +36,7 @@ const SupplierGroupEditor: React.FC = () => {
     });
   }, [suppliers, searchText]);
 
-  const handleEdit = (businessNumber: string, companyName: string, originalGroup: string) => {
+  const handleEdit = (businessNumber: string, _companyName: string, originalGroup: string) => {
     const override = overrides.find(o => o.businessNumber === businessNumber);
     setEditingBusinessNumber(businessNumber);
     setEditForm({

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { AppState, SupplierReport, Filters, Statistics, SupplierRawData, EvaluationData, AnalysisTexts } from '../types';
+import { AppState, SupplierReport, Filters, Statistics, EvaluationData, AnalysisTexts } from '../types';
 import { CSVParser } from '../utils/CSVParser';
 import { EvaluationParser } from '../utils/EvaluationParser';
 import { SuppliersParser, SupplierListData } from '../utils/SuppliersParser';

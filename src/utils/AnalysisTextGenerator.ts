@@ -1,5 +1,5 @@
 import { SupplierRawData, CalculatedMetrics, AnalysisTexts, RiskLevel } from '../types';
-import { FINANCIAL_THRESHOLDS, OPERATIONAL_THRESHOLDS } from '../constants/thresholds';
+import { FINANCIAL_THRESHOLDS } from '../constants/thresholds';
 
 export class AnalysisTextGenerator {
   /**
@@ -7,7 +7,7 @@ export class AnalysisTextGenerator {
    */
   static generateFinancialAnalysis(
     metrics: CalculatedMetrics,
-    rawData: SupplierRawData
+    _rawData: SupplierRawData
   ): string {
     let score = 0;
     const points: string[] = [];
@@ -133,8 +133,8 @@ export class AnalysisTextGenerator {
    * 종합 의견 및 거래 전략 생성 (평가 점수 반영)
    */
   static generateOverallRecommendation(
-    financialAnalysis: string,
-    operationalAnalysis: string,
+    _financialAnalysis: string,
+    _operationalAnalysis: string,
     metrics: CalculatedMetrics,
     rawData: SupplierRawData,
     evaluationScore?: number // 최종 변환점수 (M)
