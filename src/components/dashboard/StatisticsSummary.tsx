@@ -2,12 +2,17 @@ import React from 'react';
 import { useApp } from '../../contexts/AppContext';
 
 const StatisticsSummary: React.FC = () => {
-  const { statistics } = useApp();
+  const { statistics, suppliers } = useApp();
+
+  // 승인/보류 공급업체 수 계산
+  const approvedCount = suppliers.filter(s => s.rawData.submission_status === '제출완료').length;
+  const pendingCount = suppliers.filter(s => s.rawData.submission_status !== '제출완료').length;
 
   const cards = [
     {
       title: '전체 공급업체',
       value: statistics.totalCount,
+      detailText: `${statistics.totalCount}개사(승인 공급업체 ${approvedCount}개사, 보류 공급업체 ${pendingCount}개사)`,
       suffix: '개',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,6 +29,7 @@ const StatisticsSummary: React.FC = () => {
     {
       title: '평균 안전 점수',
       value: statistics.averageSafetyScore.toFixed(1),
+      detailText: undefined,
       suffix: '점',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,7 +43,14 @@ const StatisticsSummary: React.FC = () => {
       ),
       bgColor: 'bg-green-500',
     },
-  ];
+  ] as Array<{
+    title: string;
+    value: number | string;
+    detailText?: string;
+    suffix: string;
+    icon: JSX.Element;
+    bgColor: string;
+  }>;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -58,11 +71,19 @@ const StatisticsSummary: React.FC = () => {
                     <dt className="text-sm font-medium text-gray-500 truncate">
                       {card.title}
                     </dt>
-                    <dd className="flex items-baseline">
-                      <div className="text-2xl font-semibold text-gray-900">
-                        {card.value}
-                      </div>
-                      <div className="ml-2 text-sm text-gray-500">{card.suffix}</div>
+                    <dd>
+                      {card.detailText ? (
+                        <div className="text-sm font-medium text-gray-900">
+                          {card.detailText}
+                        </div>
+                      ) : (
+                        <div className="flex items-baseline">
+                          <div className="text-2xl font-semibold text-gray-900">
+                            {card.value}
+                          </div>
+                          <div className="ml-2 text-sm text-gray-500">{card.suffix}</div>
+                        </div>
+                      )}
                     </dd>
                   </dl>
                 </div>
