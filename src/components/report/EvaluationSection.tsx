@@ -11,7 +11,10 @@ interface EvaluationSectionProps {
 const EvaluationSection: React.FC<EvaluationSectionProps> = ({ evaluation, allEvaluations }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showSafetyDetails, setShowSafetyDetails] = useState(false);
+  const { suppliers } = useApp();
   
+  // 사업자등록번호로 supplier_info 데이터 찾기
+  const supplierInfo = suppliers.find(s => s.rawData.business_number === evaluation.business_number);
 
   
   // 평가 결과 분석 추가
@@ -65,60 +68,242 @@ const EvaluationSection: React.FC<EvaluationSectionProps> = ({ evaluation, allEv
 
     const responses = safetyData.responses || {};
     
-    // 질문 카테고리별 정의
+    // 질문 카테고리별 정의 (배점 정보 포함)
     const questionCategories = {
+      cert: {
+        title: '인증현황',
+        questions: [
+          {
+            id: 'cert_q1',
+            text: '귀사는 안전보건경영시스템 인증을 보유하고 있습니까?',
+            options: [
+              { value: 5, label: '인증을 보유하고 있다.' },
+              { value: 3, label: '아직 받지않았지만 향후 1년 이내 받을 계획이다.' },
+              { value: 0, label: '향후 1년이내에 인증신청 계획이 없다.' }
+            ]
+          }
+        ]
+      },
       system: {
-        title: '안전보건관리체제',
-        questions: {
-          system_q1: '안전보건관리책임자를 지정하였습니까?',
-          system_q2: '안전보건관리규정을 작성하였습니까?',
-          system_q3: '위험성평가를 실시하였습니까?'
-        }
+        title: '안전보건 관리체계',
+        questions: [
+          {
+            id: 'system_q1',
+            text: '귀사는 안전보건관리체계를 구성하고 안전보건 방침을 설정하였습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'system_q2',
+            text: '귀사는 BCT와 거래중에 발생할 수 있는 산업재해에 대해 예방조치 계획을 세우고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'system_q3',
+            text: '산업재해 예방조치 계획 추진을 위해 귀사는 귀사 구성원들에게 역할을 적절하게 분담시키고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          }
+        ]
       },
       exec: {
-        title: '경영책임자 의지',
-        questions: {
-          exec_q1: '경영책임자가 안전보건방침을 수립하였습니까?',
-          exec_q2: '안전보건 예산을 편성하였습니까?',
-          exec_q3: '정기적인 안전보건 점검을 실시합니까?',
-          exec_q4: '안전보건 개선사항을 이행합니까?'
-        }
+        title: '실행수준',
+        questions: [
+          {
+            id: 'exec_q1',
+            text: '귀사는 실시간으로 안전보건공 작업 현안을 포함한 공정별 위험요인을 파악하고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'exec_q2',
+            text: '귀사는 안전보건상이 사전조치가 되돌 보장하기 위해 정기적인 위험성 평가를 실시하고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'exec_q3',
+            text: '귀사는 비상 대응 절차(화재, 화학물질 누출 등)를 보유하고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'exec_q4',
+            text: '귀사는 관련된 안전보건 법 규정을 준수하고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          }
+        ]
       },
       edu: {
         title: '안전보건교육',
-        questions: {
-          edu_q1: '신규채용자 안전보건교육을 실시합니까?',
-          edu_q2: '정기 안전보건교육을 실시합니까?',
-          edu_q3: '작업내용 변경시 안전보건교육을 실시합니까?',
-          edu_q4: '특별안전보건교육을 실시합니까?'
-        }
+        questions: [
+          {
+            id: 'edu_q1',
+            text: '귀사는 정기 안전보건 교육을 실시하고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'edu_q2',
+            text: '귀사는 채용 시 또는 작업내용 변경 시 안전교육을 실시하고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'edu_q3',
+            text: '귀사는 특별 안전교육을 실시하고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'edu_q4',
+            text: '귀사는 안전보건관리 향상을 위한 내부 캠페인 또는 외부 교육을 받고 있습니까?',
+            options: [
+              { value: 5, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          }
+        ]
       },
       prevent: {
-        title: '사고예방활동',
-        questions: {
-          prevent_q1: '안전점검을 정기적으로 실시합니까?',
-          prevent_q2: '위험요인 발견시 즉시 조치합니까?',
-          prevent_q3: '개인보호구를 지급하고 착용을 지도합니까?',
-          prevent_q4: '안전수칙을 게시하고 준수하도록 합니까?',
-          prevent_q5: '산업재해 발생시 보고체계가 구축되어 있습니까?',
-          prevent_q6: '응급처치 체계가 구축되어 있습니까?',
-          prevent_q7: '화재예방 및 소방시설을 관리합니까?',
-          prevent_q8: '작업환경측정을 실시합니까?',
-          prevent_q9: '특수건강진단을 실시합니까?',
-          prevent_q10: '안전보건표지를 설치하였습니까?'
-        }
-      },
-      cert: {
-        title: '자격 및 면허',
-        questions: {
-          cert_q1: '관련 자격증 및 면허를 보유하고 있습니까?'
-        }
+        title: '재해 예방 활동',
+        questions: [
+          {
+            id: 'prevent_q1',
+            text: '귀사는 (법에 정해진) 안전보건 담당자를 확보하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' },
+              { value: 3, label: '해당없음' }
+            ]
+          },
+          {
+            id: 'prevent_q2',
+            text: '귀사는 안전장비 및 보호구의 충분한 재고를 확보하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q3',
+            text: '귀사는 보유하고 있는 기계 및 장비를 안전하게 유지, 보수하기 위한 유지보수 프로그램을 운영하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q4',
+            text: '귀사는 안전보건 관리 개선 활동을 하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q5',
+            text: '귀사는 작업 전 안전 점검을 실시하고 있습니까? (예: TBM, 위험예지훈련 등)',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q5_1',
+            text: '(5번 질문이 예스인 경우) 귀사 근로자는 작업 전 안전 회의에 적극 참여하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q5_2',
+            text: '(5번 질문이 예스인 경우) 귀사는 작업 전 안전 점검 시 발견된 위험을 즉시 제거 또는 통제하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q6',
+            text: '귀사는 산업안전보건위원회(노사협의체)를 개최하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q7',
+            text: '귀사는 개인 보호구를 사용해야 하는 근로자들에게 개인 보호구 착용 및 점검 요령에 대한 교육을 실시하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q8',
+            text: '귀사는 화학물질을 사용하는 작업자에게 물질안전보건자료(MSDS)를 교육하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q9',
+            text: '귀사는 위험 요인을 근로자에게 알리기 위한 안전 보건 표지판을 게시하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          },
+          {
+            id: 'prevent_q10',
+            text: '귀사는 위험 시 근로자가 작업을 중지하고 대피할 수 있도록 허용하고 있습니까?',
+            options: [
+              { value: 3, label: 'YES' },
+              { value: 0, label: 'NO' }
+            ]
+          }
+        ]
       },
       accident: {
-        title: '재해현황',
-        questions: {
-          accident_q1: '최근 3년간 산업재해 발생 현황은?'
-        }
+        title: '재해관리',
+        questions: [
+          {
+            id: 'accident_q1',
+            text: '산업재해 발생 이력',
+            options: [
+              { value: 5, label: '재해 발생 0건 (과거 3년)' },
+              { value: 4, label: '재해 발생 1건 (휴업 이상재해)' },
+              { value: 3, label: '재해 발생 2~3건 (휴업 이상재해)' },
+              { value: 2, label: '재해 발생 4~5건 (휴업 이상재해)' },
+              { value: 0, label: '재해 발생 6건 이상 또는 중대재해 발생' }
+            ]
+          }
+        ]
       }
     };
 
@@ -128,30 +313,43 @@ const EvaluationSection: React.FC<EvaluationSectionProps> = ({ evaluation, allEv
       return 'text-red-600';
     };
 
-    const getScoreText = (score: number) => {
-      if (score >= 5) return '우수';
-      if (score >= 3) return '보통';
-      return '미흡';
-    };
-
     return (
       <div className="space-y-4">
         {Object.entries(questionCategories).map(([categoryKey, category]) => (
           <div key={categoryKey} className="bg-gray-50 rounded-lg p-4">
             <h6 className="text-sm font-bold text-gray-900 mb-3">{category.title}</h6>
-            <div className="space-y-2">
-              {Object.entries(category.questions).map(([questionKey, questionText]) => {
-                const score = responses[questionKey] || 0;
+            <div className="space-y-3">
+              {category.questions.map((question) => {
+                const userScore = responses[question.id] || 0;
+                const selectedOption = question.options.find(opt => opt.value === userScore);
+                
                 return (
-                  <div key={questionKey} className="flex justify-between items-center">
-                    <span className="text-xs text-gray-700 flex-1">{questionText}</span>
-                    <div className="flex items-center gap-2 ml-4">
-                      <span className={`text-xs font-bold ${getScoreColor(score)}`}>
-                        {score}점
-                      </span>
-                      <span className={`text-xs px-2 py-1 rounded ${getScoreColor(score)} bg-opacity-10`}>
-                        {getScoreText(score)}
-                      </span>
+                  <div key={question.id} className="border-b last:border-b-0 pb-3 last:pb-0">
+                    <p className="text-xs text-gray-700 mb-2 font-medium">{question.text}</p>
+                    
+                    {/* 배점 기준 */}
+                    <div className="ml-3 mb-2 space-y-1">
+                      <p className="text-xs font-semibold text-gray-600">배점 기준:</p>
+                      {question.options.map(opt => (
+                        <p key={opt.value} className="text-xs text-gray-500">
+                          • {opt.label} (배점 {opt.value}점)
+                        </p>
+                      ))}
+                    </div>
+                    
+                    {/* 업체 답변 */}
+                    <div className="ml-3 bg-blue-50 border border-blue-200 rounded p-2">
+                      <p className="text-xs font-semibold text-blue-900 mb-1">업체 답변:</p>
+                      {selectedOption ? (
+                        <>
+                          <p className="text-xs text-gray-700">{selectedOption.label}</p>
+                          <p className={`text-xs font-bold mt-1 ${getScoreColor(userScore)}`}>
+                            획득 점수: {userScore}점
+                          </p>
+                        </>
+                      ) : (
+                        <p className="text-xs text-gray-500">답변 없음</p>
+                      )}
                     </div>
                   </div>
                 );
@@ -452,7 +650,7 @@ const EvaluationSection: React.FC<EvaluationSectionProps> = ({ evaluation, allEv
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm font-semibold text-gray-700">원점수 (평가 결과)</span>
                   <span className="text-3xl font-bold text-blue-600">
-                    {evaluation.final_score?.toFixed(1)}점
+                    {supplierInfo?.rawData.safety_questionnaire_score || evaluation.final_score?.toFixed(1)}점
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
