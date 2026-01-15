@@ -1,0 +1,1336 @@
+{
+  "supplierGroupOverrides": [
+    {
+      "businessNumber": "6091491023",
+      "companyName": "드림디포진해녹산점",
+      "originalGroup": "-",
+      "overrideGroup": "G",
+      "subGroup": ""
+    },
+    {
+      "businessNumber": "6078174845",
+      "companyName": "(주)케이엔에스",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "2818100802",
+      "companyName": "(주)성광소방",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "6178184490",
+      "companyName": "(주)피엔피엔지니어링",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "6028148513",
+      "companyName": "신양항업(주)",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E2"
+    },
+    {
+      "businessNumber": "1288174702",
+      "companyName": "동화전기(주)",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "1518702082",
+      "companyName": "(주)피아이에스엔지니어링",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "6098193120",
+      "companyName": "(주)아이웍스",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "6018124594",
+      "companyName": "용신해운(주)",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "1048180042",
+      "companyName": "(주)에이티맥스",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "5058137314",
+      "companyName": "경남고속뉴부산관광(주)",
+      "originalGroup": "-",
+      "overrideGroup": "E",
+      "subGroup": "E3"
+    },
+    {
+      "businessNumber": "1902500378",
+      "companyName": "해영사",
+      "originalGroup": "-",
+      "overrideGroup": "G",
+      "subGroup": ""
+    },
+    {
+      "businessNumber": "6462501598",
+      "companyName": "수림공조시스템",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "6018119301",
+      "companyName": "(주)코리아브이익스프레스",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "6028129122",
+      "companyName": "주식회사용신",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E2"
+    },
+    {
+      "businessNumber": "1058137363",
+      "companyName": "(주)고암",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E1"
+    },
+    {
+      "businessNumber": "6178120161",
+      "companyName": "(주)용문",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E1"
+    },
+    {
+      "businessNumber": "6218185085",
+      "companyName": "부경이엔지",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "4278600970",
+      "companyName": "뉴포트마린(주)",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E2"
+    },
+    {
+      "businessNumber": "6068207845",
+      "companyName": "사단법인 부산신항보안공사",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "5708700155",
+      "companyName": "주식회사 그린포트",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "3738800279",
+      "companyName": "부산시티투어 협동조합",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E3"
+    },
+    {
+      "businessNumber": "6058635502",
+      "companyName": "주식회사 피앤테크",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "6218515947",
+      "companyName": "오경컴텍",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "6051463224",
+      "companyName": "영진종합전기",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E4"
+    },
+    {
+      "businessNumber": "1658502035",
+      "companyName": "㈜이노브",
+      "originalGroup": "E",
+      "overrideGroup": "E",
+      "subGroup": "E3"
+    }
+  ],
+  "transactionData": {
+    "transaction_data_6210838712": {
+      "supplier_id": "14c72694-7c13-4aa6-8fa2-8f3c91a4d980",
+      "business_number": "6210838712",
+      "transaction_amount": 0.151333333,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1658502035": {
+      "supplier_id": "b012ff86-6357-442e-bbf5-ce90235c5d19",
+      "business_number": "1658502035",
+      "transaction_amount": 0.5584688,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6068632323": {
+      "supplier_id": "10b23b88-318d-4b41-8b72-651474f8cd53",
+      "business_number": "6068632323",
+      "transaction_amount": 1.016,
+      "transaction_count": 20,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_0644142b-4591-45bf-808f-6ea8ede605f1": {
+      "supplier_id": "0644142b-4591-45bf-808f-6ea8ede605f1",
+      "transaction_amount": 0.053333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T01:11:40.681Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1f265f31-33e9-41c0-81b1-1a71be271c3a": {
+      "supplier_id": "1f265f31-33e9-41c0-81b1-1a71be271c3a",
+      "transaction_amount": 34.19838453,
+      "transaction_count": 76,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_3b5d1816-0ca3-4c5f-8616-9081a3a44202": {
+      "supplier_id": "3b5d1816-0ca3-4c5f-8616-9081a3a44202",
+      "transaction_amount": 1.0768,
+      "transaction_count": 12,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_2705fd7e-87fe-40f3-b2e7-f6cea7432dcd": {
+      "supplier_id": "2705fd7e-87fe-40f3-b2e7-f6cea7432dcd",
+      "transaction_amount": 0.033333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_a4c248ee-3a49-479c-b81d-37eee34f76b1": {
+      "supplier_id": "a4c248ee-3a49-479c-b81d-37eee34f76b1",
+      "transaction_amount": 1.698666667,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_0e2c7a5c-59ab-4fd9-9823-520ad32ed0ac": {
+      "supplier_id": "0e2c7a5c-59ab-4fd9-9823-520ad32ed0ac",
+      "transaction_amount": 0.09516,
+      "transaction_count": 6,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1048180042": {
+      "supplier_id": "c4061156-7d92-436f-b7d4-65fac1aa2bf2",
+      "business_number": "1048180042",
+      "transaction_amount": 2.044,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1208193646": {
+      "supplier_id": "aad7d616-bb10-4247-8388-886267367351",
+      "business_number": "1208193646",
+      "transaction_amount": 21.66422,
+      "transaction_count": 17,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_3738800279": {
+      "supplier_id": "2e4773de-bfe8-4965-8480-4b133cdf5b6b",
+      "business_number": "3738800279",
+      "transaction_amount": 0.158666667,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1058757736": {
+      "supplier_id": "1a44976f-380c-4813-aecf-2a5b3168d4af",
+      "business_number": "1058757736",
+      "transaction_amount": 0.314333333,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1718103026": {
+      "supplier_id": "8d4af4d6-f3d7-45fd-a6a9-ca4e52837d7d",
+      "business_number": "1718103026",
+      "transaction_amount": 0.232,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_4278600970": {
+      "supplier_id": "f372f333-21df-45a9-b07b-b4514553f8ba",
+      "business_number": "4278600970",
+      "transaction_amount": 1.543486227,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_7cead1bc-9ee2-4c22-80ad-e1b88824da6a": {
+      "supplier_id": "7cead1bc-9ee2-4c22-80ad-e1b88824da6a",
+      "transaction_amount": 0.01,
+      "transaction_count": 6,
+      "updated_at": "2025-11-19T01:11:40.683Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6088120468": {
+      "supplier_id": "022248dd-ecee-460e-b237-46eee6f690f7",
+      "business_number": "6088120468",
+      "transaction_amount": 0.106916,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6098193120": {
+      "supplier_id": "b4b7f52a-a187-4db4-ad0e-b1aeeb4266bf",
+      "business_number": "6098193120",
+      "transaction_amount": 0.431666667,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6178199673": {
+      "supplier_id": "cce184ea-e3b4-4ab5-95eb-a78070b01145",
+      "business_number": "6178199673",
+      "transaction_amount": 0.008,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_0c010a1d-c409-4d06-b3a9-c264e895d22a": {
+      "supplier_id": "0c010a1d-c409-4d06-b3a9-c264e895d22a",
+      "transaction_amount": 0.0618292,
+      "transaction_count": 15,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_5468600970": {
+      "supplier_id": "a4c248ee-3a49-479c-b81d-37eee34f76b1",
+      "business_number": "5468600970",
+      "transaction_amount": 1.698666667,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6063257073": {
+      "supplier_id": "a5ff9b2a-692f-456b-8f22-cb7bf410d76a",
+      "business_number": "6063257073",
+      "transaction_amount": 0.010026667,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6178120161": {
+      "supplier_id": "7e775978-e5f2-472f-bf6e-95b4f69ed201",
+      "business_number": "6178120161",
+      "transaction_amount": 10.21456867,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1b33f026-6402-4766-9465-914d9f0a626d": {
+      "supplier_id": "1b33f026-6402-4766-9465-914d9f0a626d",
+      "transaction_amount": 1.6826912,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6171788267": {
+      "supplier_id": "5a8fe09a-8d4d-4b30-b684-d65055fd1018",
+      "business_number": "6171788267",
+      "transaction_amount": 0.147176,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_5a7e5226-b5c1-4c72-9c00-2ca60cb606d9": {
+      "supplier_id": "5a7e5226-b5c1-4c72-9c00-2ca60cb606d9",
+      "transaction_amount": 1.480666667,
+      "transaction_count": 52,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_cf46d70c-082b-4be0-8f40-b8a9bfb1c962": {
+      "supplier_id": "cf46d70c-082b-4be0-8f40-b8a9bfb1c962",
+      "transaction_amount": 0.058586667,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_4fae3c43-d0ab-4416-a085-4e881f232443": {
+      "supplier_id": "4fae3c43-d0ab-4416-a085-4e881f232443",
+      "transaction_amount": 51.6505008,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T01:11:40.681Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_e2c28eab-f5c3-4317-9964-e4eba2e0896b": {
+      "supplier_id": "e2c28eab-f5c3-4317-9964-e4eba2e0896b",
+      "transaction_amount": 0.131333333,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_7116200656": {
+      "supplier_id": "833fd262-f0dd-4731-adb1-7286ae0d3d7b",
+      "business_number": "7116200656",
+      "transaction_amount": 0.363333333,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_18518309-dda7-4071-befb-08132e93e0e4": {
+      "supplier_id": "18518309-dda7-4071-befb-08132e93e0e4",
+      "transaction_amount": 0.08,
+      "transaction_count": 3,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_42a5f4ad-7d18-42b6-95ce-090238a7b3e9": {
+      "supplier_id": "42a5f4ad-7d18-42b6-95ce-090238a7b3e9",
+      "transaction_amount": 14.64435733,
+      "transaction_count": 12,
+      "updated_at": "2025-11-19T01:11:40.681Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_efa8ca67-c08f-4f5c-9651-d64a80b9bd14": {
+      "supplier_id": "efa8ca67-c08f-4f5c-9651-d64a80b9bd14",
+      "transaction_amount": 0.467786667,
+      "transaction_count": 18,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6462501598": {
+      "supplier_id": "0e2c7a5c-59ab-4fd9-9823-520ad32ed0ac",
+      "business_number": "6462501598",
+      "transaction_amount": 0.09516,
+      "transaction_count": 6,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_940d1fca-d055-4165-a463-9c6b4785d386": {
+      "supplier_id": "940d1fca-d055-4165-a463-9c6b4785d386",
+      "transaction_amount": 0.111066667,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6051918476": {
+      "supplier_id": "e2c28eab-f5c3-4317-9964-e4eba2e0896b",
+      "business_number": "6051918476",
+      "transaction_amount": 0.131333333,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_b77f32eb-df43-46af-a46f-23dc6c7679f1": {
+      "supplier_id": "b77f32eb-df43-46af-a46f-23dc6c7679f1",
+      "transaction_amount": 0.056566,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_3668803356": {
+      "supplier_id": "f531a7bd-2a8e-49f2-9c3b-2385992a2d48",
+      "business_number": "3668803356",
+      "transaction_amount": 0.96966048,
+      "transaction_count": 28,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6028145137": {
+      "supplier_id": "ea7534ac-08a4-4a9f-a4b5-d848c3424c56",
+      "business_number": "6028145137",
+      "transaction_amount": 0.046666667,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_b012ff86-6357-442e-bbf5-ce90235c5d19": {
+      "supplier_id": "b012ff86-6357-442e-bbf5-ce90235c5d19",
+      "transaction_amount": 0.5584688,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1058177837": {
+      "supplier_id": "efa8ca67-c08f-4f5c-9651-d64a80b9bd14",
+      "business_number": "1058177837",
+      "transaction_amount": 0.467786667,
+      "transaction_count": 18,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1288174702": {
+      "supplier_id": "2705fd7e-87fe-40f3-b2e7-f6cea7432dcd",
+      "business_number": "1288174702",
+      "transaction_amount": 0.033333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_3dba3a71-4bca-4ba7-a5e9-b276c7749121": {
+      "supplier_id": "3dba3a71-4bca-4ba7-a5e9-b276c7749121",
+      "transaction_amount": 4.177896,
+      "transaction_count": 18,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6171151259": {
+      "supplier_id": "7bcd2304-781f-4487-8965-094539cd13b3",
+      "business_number": "6171151259",
+      "transaction_amount": 0.230986667,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6078174845": {
+      "supplier_id": "97c24c8d-1bbf-4d3a-bad1-516bc4e0743d",
+      "business_number": "6078174845",
+      "transaction_amount": 0.364,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_f372f333-21df-45a9-b07b-b4514553f8ba": {
+      "supplier_id": "f372f333-21df-45a9-b07b-b4514553f8ba",
+      "transaction_amount": 1.543486227,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_2818100802": {
+      "supplier_id": "0c6028c0-a4cd-4bf7-8bb6-9d9287c16249",
+      "business_number": "2818100802",
+      "transaction_amount": 0.044,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6068659088": {
+      "supplier_id": "eec495fb-d834-4a78-99e1-f90a60be97b8",
+      "business_number": "6068659088",
+      "transaction_amount": 0.816,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6098189102": {
+      "supplier_id": "42a5f4ad-7d18-42b6-95ce-090238a7b3e9",
+      "business_number": "6098189102",
+      "transaction_amount": 14.64435733,
+      "transaction_count": 12,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_840d866a-6aea-42ce-853a-1afcc55c6066": {
+      "supplier_id": "840d866a-6aea-42ce-853a-1afcc55c6066",
+      "transaction_amount": 2.456309067,
+      "transaction_count": 72,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_be325350-da21-4f8a-907b-cb30b8514f44": {
+      "supplier_id": "be325350-da21-4f8a-907b-cb30b8514f44",
+      "transaction_amount": 0.748055573,
+      "transaction_count": 20,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_97c24c8d-1bbf-4d3a-bad1-516bc4e0743d": {
+      "supplier_id": "97c24c8d-1bbf-4d3a-bad1-516bc4e0743d",
+      "transaction_amount": 0.364,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6188121601": {
+      "supplier_id": "4fae3c43-d0ab-4416-a085-4e881f232443",
+      "business_number": "6188121601",
+      "transaction_amount": 51.6505008,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_c31d3c22-3847-4a4d-b841-560ddae448de": {
+      "supplier_id": "c31d3c22-3847-4a4d-b841-560ddae448de",
+      "transaction_amount": 1.864666667,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_c4061156-7d92-436f-b7d4-65fac1aa2bf2": {
+      "supplier_id": "c4061156-7d92-436f-b7d4-65fac1aa2bf2",
+      "transaction_amount": 2.044,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6791701991": {
+      "supplier_id": "4c28a1a2-ea70-40e2-8065-02d629bf2407",
+      "business_number": "6791701991",
+      "transaction_amount": 0.644233333,
+      "transaction_count": 6,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_f531a7bd-2a8e-49f2-9c3b-2385992a2d48": {
+      "supplier_id": "f531a7bd-2a8e-49f2-9c3b-2385992a2d48",
+      "transaction_amount": 0.96966048,
+      "transaction_count": 28,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_f9428186-5031-4992-be06-744ca911cf17": {
+      "supplier_id": "f9428186-5031-4992-be06-744ca911cf17",
+      "transaction_amount": 0.096352,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_a5ff9b2a-692f-456b-8f22-cb7bf410d76a": {
+      "supplier_id": "a5ff9b2a-692f-456b-8f22-cb7bf410d76a",
+      "transaction_amount": 0.010026667,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1058137363": {
+      "supplier_id": "0f2c1412-bd8e-4b46-9a4f-c168acf331be",
+      "business_number": "1058137363",
+      "transaction_amount": 6.573293333,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6018124594": {
+      "supplier_id": "7cead1bc-9ee2-4c22-80ad-e1b88824da6a",
+      "business_number": "6018124594",
+      "transaction_amount": 0.01,
+      "transaction_count": 6,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_8d4af4d6-f3d7-45fd-a6a9-ca4e52837d7d": {
+      "supplier_id": "8d4af4d6-f3d7-45fd-a6a9-ca4e52837d7d",
+      "transaction_amount": 0.232,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_14c72694-7c13-4aa6-8fa2-8f3c91a4d980": {
+      "supplier_id": "14c72694-7c13-4aa6-8fa2-8f3c91a4d980",
+      "transaction_amount": 0.151333333,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_0c6028c0-a4cd-4bf7-8bb6-9d9287c16249": {
+      "supplier_id": "0c6028c0-a4cd-4bf7-8bb6-9d9287c16249",
+      "transaction_amount": 0.044,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_5708700155": {
+      "supplier_id": "6db30b06-01be-4abf-a144-b34fc14f2841",
+      "business_number": "5708700155",
+      "transaction_amount": 0.270898667,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_041ed732-eda4-4a02-99ed-4b1cf20e8e59": {
+      "supplier_id": "041ed732-eda4-4a02-99ed-4b1cf20e8e59",
+      "transaction_amount": 0.373333333,
+      "transaction_count": 3,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_5a8fe09a-8d4d-4b30-b684-d65055fd1018": {
+      "supplier_id": "5a8fe09a-8d4d-4b30-b684-d65055fd1018",
+      "transaction_amount": 0.147176,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_5938801547": {
+      "supplier_id": "25be0fb3-690e-4047-8c7f-e3d3d9c493f1",
+      "business_number": "5938801547",
+      "transaction_amount": 4.886866667,
+      "transaction_count": 19,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6061115364": {
+      "supplier_id": "90714c59-525f-412c-a505-d5a37824b33b",
+      "business_number": "6061115364",
+      "transaction_amount": 0.718213173,
+      "transaction_count": 14,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6051166332": {
+      "supplier_id": "0c010a1d-c409-4d06-b3a9-c264e895d22a",
+      "business_number": "6051166332",
+      "transaction_amount": 0.0618292,
+      "transaction_count": 15,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_8493900399": {
+      "supplier_id": "f9428186-5031-4992-be06-744ca911cf17",
+      "business_number": "8493900399",
+      "transaction_amount": 0.096352,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6063040336": {
+      "supplier_id": "754e3880-af5c-4d8b-b22d-a02c2104bbe7",
+      "business_number": "6063040336",
+      "transaction_amount": 7.597334667,
+      "transaction_count": 175,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1518702082": {
+      "supplier_id": "1642ec0f-0607-47c7-aa7f-13669c85b00f",
+      "business_number": "1518702082",
+      "transaction_amount": 0.173333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6031154465": {
+      "supplier_id": "840d866a-6aea-42ce-853a-1afcc55c6066",
+      "business_number": "6031154465",
+      "transaction_amount": 2.456309067,
+      "transaction_count": 72,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1a44976f-380c-4813-aecf-2a5b3168d4af": {
+      "supplier_id": "1a44976f-380c-4813-aecf-2a5b3168d4af",
+      "transaction_amount": 0.314333333,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1560501990": {
+      "supplier_id": "ca4468bc-ec6a-4c60-a838-81d7017dec18",
+      "business_number": "1560501990",
+      "transaction_amount": 0.592264,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6058502760": {
+      "supplier_id": "3dba3a71-4bca-4ba7-a5e9-b276c7749121",
+      "business_number": "6058502760",
+      "transaction_amount": 4.177896,
+      "transaction_count": 18,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_8978603273": {
+      "supplier_id": "cf46d70c-082b-4be0-8f40-b8a9bfb1c962",
+      "business_number": "8978603273",
+      "transaction_amount": 0.058586667,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_24f1def1-e9f9-46e3-9152-c0ec337e2db2": {
+      "supplier_id": "24f1def1-e9f9-46e3-9152-c0ec337e2db2",
+      "transaction_amount": 1.209333333,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_93ef9c79-172f-4240-8a53-2695aa83d44c": {
+      "supplier_id": "93ef9c79-172f-4240-8a53-2695aa83d44c",
+      "transaction_amount": 0.158666667,
+      "transaction_count": 5,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_9cd0a82c-b12a-4b6b-96a9-43e2d55045b9": {
+      "supplier_id": "9cd0a82c-b12a-4b6b-96a9-43e2d55045b9",
+      "transaction_amount": 0.329333333,
+      "transaction_count": 12,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_ca4468bc-ec6a-4c60-a838-81d7017dec18": {
+      "supplier_id": "ca4468bc-ec6a-4c60-a838-81d7017dec18",
+      "transaction_amount": 0.592264,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_5818701038": {
+      "supplier_id": "c31d3c22-3847-4a4d-b841-560ddae448de",
+      "business_number": "5818701038",
+      "transaction_amount": 1.864666667,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_cce184ea-e3b4-4ab5-95eb-a78070b01145": {
+      "supplier_id": "cce184ea-e3b4-4ab5-95eb-a78070b01145",
+      "transaction_amount": 0.008,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_3200066c-f9ea-423b-a69e-94ed809050b7": {
+      "supplier_id": "3200066c-f9ea-423b-a69e-94ed809050b7",
+      "transaction_amount": 0.121333333,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_022248dd-ecee-460e-b237-46eee6f690f7": {
+      "supplier_id": "022248dd-ecee-460e-b237-46eee6f690f7",
+      "transaction_amount": 0.106916,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_10b23b88-318d-4b41-8b72-651474f8cd53": {
+      "supplier_id": "10b23b88-318d-4b41-8b72-651474f8cd53",
+      "transaction_amount": 1.016,
+      "transaction_count": 20,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_2e4773de-bfe8-4965-8480-4b133cdf5b6b": {
+      "supplier_id": "2e4773de-bfe8-4965-8480-4b133cdf5b6b",
+      "transaction_amount": 0.158666667,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_30b2d371-46f5-412f-b4e5-008f0e28f386": {
+      "supplier_id": "30b2d371-46f5-412f-b4e5-008f0e28f386",
+      "transaction_amount": 0.119246667,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_3108120275": {
+      "supplier_id": "1f265f31-33e9-41c0-81b1-1a71be271c3a",
+      "business_number": "3108120275",
+      "transaction_amount": 34.19838453,
+      "transaction_count": 76,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6e070f01-d502-4cdd-b9ba-e4c68eb64a21": {
+      "supplier_id": "6e070f01-d502-4cdd-b9ba-e4c68eb64a21",
+      "transaction_amount": 7.487466667,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T01:11:40.681Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_8763801340": {
+      "supplier_id": "ac2f6a7f-d996-47ed-aa7b-13cb612307e6",
+      "business_number": "8763801340",
+      "transaction_amount": 0.176,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_ce310349-79e5-4050-bf74-05bc67f9dfc7": {
+      "supplier_id": "ce310349-79e5-4050-bf74-05bc67f9dfc7",
+      "transaction_amount": 0.085333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_3258101891": {
+      "supplier_id": "0644142b-4591-45bf-808f-6ea8ede605f1",
+      "business_number": "3258101891",
+      "transaction_amount": 0.053333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_57d5dc79-09d3-4540-b8ce-0b625e0c5d9a": {
+      "supplier_id": "57d5dc79-09d3-4540-b8ce-0b625e0c5d9a",
+      "transaction_amount": 0.2172,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6178100016": {
+      "supplier_id": "88f8d3d6-d5ee-4105-a769-cc05dd785a64",
+      "business_number": "6178100016",
+      "transaction_amount": 0.673066667,
+      "transaction_count": 14,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6068207845": {
+      "supplier_id": "f7d2524f-2130-4623-84ce-5d6c6f76fec9",
+      "business_number": "6068207845",
+      "transaction_amount": 15.52362667,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6178184490": {
+      "supplier_id": "5a7e5226-b5c1-4c72-9c00-2ca60cb606d9",
+      "business_number": "6178184490",
+      "transaction_amount": 1.480666667,
+      "transaction_count": 52,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6db30b06-01be-4abf-a144-b34fc14f2841": {
+      "supplier_id": "6db30b06-01be-4abf-a144-b34fc14f2841",
+      "transaction_amount": 0.270898667,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1208104589": {
+      "supplier_id": "3b5d1816-0ca3-4c5f-8616-9081a3a44202",
+      "business_number": "1208104589",
+      "transaction_amount": 1.0768,
+      "transaction_count": 12,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6058110092": {
+      "supplier_id": "18518309-dda7-4071-befb-08132e93e0e4",
+      "business_number": "6058110092",
+      "transaction_amount": 0.08,
+      "transaction_count": 3,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_a755ace7-70fb-4af6-9dc1-b0dde3965a3d": {
+      "supplier_id": "a755ace7-70fb-4af6-9dc1-b0dde3965a3d",
+      "transaction_amount": 0.053333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6218185085": {
+      "supplier_id": "3200066c-f9ea-423b-a69e-94ed809050b7",
+      "business_number": "6218185085",
+      "transaction_amount": 0.121333333,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_90714c59-525f-412c-a505-d5a37824b33b": {
+      "supplier_id": "90714c59-525f-412c-a505-d5a37824b33b",
+      "transaction_amount": 0.718213173,
+      "transaction_count": 14,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_833fd262-f0dd-4731-adb1-7286ae0d3d7b": {
+      "supplier_id": "833fd262-f0dd-4731-adb1-7286ae0d3d7b",
+      "transaction_amount": 0.363333333,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_457cfed9-b94d-4f85-9101-3d5db8ceb28b": {
+      "supplier_id": "457cfed9-b94d-4f85-9101-3d5db8ceb28b",
+      "transaction_amount": 0.25292,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_aad7d616-bb10-4247-8388-886267367351": {
+      "supplier_id": "aad7d616-bb10-4247-8388-886267367351",
+      "transaction_amount": 21.66422,
+      "transaction_count": 17,
+      "updated_at": "2025-11-19T01:11:40.681Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_5058127314": {
+      "supplier_id": "24f1def1-e9f9-46e3-9152-c0ec337e2db2",
+      "business_number": "5058127314",
+      "transaction_amount": 1.209333333,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1048115537": {
+      "supplier_id": "6e070f01-d502-4cdd-b9ba-e4c68eb64a21",
+      "business_number": "1048115537",
+      "transaction_amount": 7.487466667,
+      "transaction_count": 11,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6051463224": {
+      "supplier_id": "2aee11a0-4726-433a-9432-876f5fa38683",
+      "business_number": "6051463224",
+      "transaction_amount": 0.03,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6100231304": {
+      "supplier_id": "a755ace7-70fb-4af6-9dc1-b0dde3965a3d",
+      "business_number": "6100231304",
+      "transaction_amount": 0.053333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_2648123208": {
+      "supplier_id": "041ed732-eda4-4a02-99ed-4b1cf20e8e59",
+      "business_number": "2648123208",
+      "transaction_amount": 0.373333333,
+      "transaction_count": 3,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_94610172-d972-4591-9fc2-d753dda3fdfe": {
+      "supplier_id": "94610172-d972-4591-9fc2-d753dda3fdfe",
+      "transaction_amount": 0.0636,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_b4b7f52a-a187-4db4-ad0e-b1aeeb4266bf": {
+      "supplier_id": "b4b7f52a-a187-4db4-ad0e-b1aeeb4266bf",
+      "transaction_amount": 0.431666667,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_eec495fb-d834-4a78-99e1-f90a60be97b8": {
+      "supplier_id": "eec495fb-d834-4a78-99e1-f90a60be97b8",
+      "transaction_amount": 0.816,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_59e775a3-b3f6-4b88-ae76-b10e035191b4": {
+      "supplier_id": "59e775a3-b3f6-4b88-ae76-b10e035191b4",
+      "transaction_amount": 62.169232,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T01:11:40.681Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_ac2f6a7f-d996-47ed-aa7b-13cb612307e6": {
+      "supplier_id": "ac2f6a7f-d996-47ed-aa7b-13cb612307e6",
+      "transaction_amount": 0.176,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_f7d2524f-2130-4623-84ce-5d6c6f76fec9": {
+      "supplier_id": "f7d2524f-2130-4623-84ce-5d6c6f76fec9",
+      "transaction_amount": 15.52362667,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_0f2c1412-bd8e-4b46-9a4f-c168acf331be": {
+      "supplier_id": "0f2c1412-bd8e-4b46-9a4f-c168acf331be",
+      "transaction_amount": 6.573293333,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_944bf33f-5c3d-43e1-854d-644489d0bd8a": {
+      "supplier_id": "944bf33f-5c3d-43e1-854d-644489d0bd8a",
+      "transaction_amount": 0.5,
+      "transaction_count": 10,
+      "updated_at": "2025-11-12T01:29:12.290Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_7bcd2304-781f-4487-8965-094539cd13b3": {
+      "supplier_id": "7bcd2304-781f-4487-8965-094539cd13b3",
+      "transaction_amount": 0.230986667,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_5069d785-7bd7-447e-b4c3-904080f8e4b1": {
+      "supplier_id": "5069d785-7bd7-447e-b4c3-904080f8e4b1",
+      "transaction_amount": 1.3042,
+      "transaction_count": 27,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1278198958": {
+      "supplier_id": "bf3eecd5-8a82-432f-84d9-988450d20935",
+      "business_number": "1278198958",
+      "transaction_amount": 0.151109333,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6028129122": {
+      "supplier_id": "aed9ee02-1c68-4e42-bd4f-304bddbc8c0b",
+      "business_number": "6028129122",
+      "transaction_amount": 0.743838733,
+      "transaction_count": 5,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_7798101064": {
+      "supplier_id": "93ef9c79-172f-4240-8a53-2695aa83d44c",
+      "business_number": "7798101064",
+      "transaction_amount": 0.158666667,
+      "transaction_count": 5,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_2aee11a0-4726-433a-9432-876f5fa38683": {
+      "supplier_id": "2aee11a0-4726-433a-9432-876f5fa38683",
+      "transaction_amount": 0.03,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_bf3eecd5-8a82-432f-84d9-988450d20935": {
+      "supplier_id": "bf3eecd5-8a82-432f-84d9-988450d20935",
+      "transaction_amount": 0.151109333,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_7668800409": {
+      "supplier_id": "69073fc9-0161-47b7-a039-1b9aa5ff92db",
+      "business_number": "7668800409",
+      "transaction_amount": 0.593333333,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_a5bd323f-193f-4bed-8aa9-24b2daa992e3": {
+      "supplier_id": "a5bd323f-193f-4bed-8aa9-24b2daa992e3",
+      "transaction_amount": 0.116666667,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6018119301": {
+      "supplier_id": "57d5dc79-09d3-4540-b8ce-0b625e0c5d9a",
+      "business_number": "6018119301",
+      "transaction_amount": 0.2172,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6028148513": {
+      "supplier_id": "1b33f026-6402-4766-9465-914d9f0a626d",
+      "business_number": "6028148513",
+      "transaction_amount": 1.6826912,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_aed9ee02-1c68-4e42-bd4f-304bddbc8c0b": {
+      "supplier_id": "aed9ee02-1c68-4e42-bd4f-304bddbc8c0b",
+      "transaction_amount": 0.743838733,
+      "transaction_count": 5,
+      "updated_at": "2025-11-19T01:11:40.683Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6170375033": {
+      "supplier_id": "940d1fca-d055-4165-a463-9c6b4785d386",
+      "business_number": "6170375033",
+      "transaction_amount": 0.111066667,
+      "transaction_count": 8,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_dc23c0a8-297d-4149-aeeb-22819cd66ede": {
+      "supplier_id": "dc23c0a8-297d-4149-aeeb-22819cd66ede",
+      "transaction_amount": 0.051466667,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_4c28a1a2-ea70-40e2-8065-02d629bf2407": {
+      "supplier_id": "4c28a1a2-ea70-40e2-8065-02d629bf2407",
+      "transaction_amount": 0.644233333,
+      "transaction_count": 6,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6091491023": {
+      "supplier_id": "b77f32eb-df43-46af-a46f-23dc6c7679f1",
+      "business_number": "6091491023",
+      "transaction_amount": 0.056566,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6058635502": {
+      "supplier_id": "a5bd323f-193f-4bed-8aa9-24b2daa992e3",
+      "business_number": "6058635502",
+      "transaction_amount": 0.116666667,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6050979305": {
+      "supplier_id": "94610172-d972-4591-9fc2-d753dda3fdfe",
+      "business_number": "6050979305",
+      "transaction_amount": 0.0636,
+      "transaction_count": 4,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6218515947": {
+      "supplier_id": "be325350-da21-4f8a-907b-cb30b8514f44",
+      "business_number": "6218515947",
+      "transaction_amount": 0.748055573,
+      "transaction_count": 20,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6158159582": {
+      "supplier_id": "dc23c0a8-297d-4149-aeeb-22819cd66ede",
+      "business_number": "6158159582",
+      "transaction_amount": 0.051466667,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_754e3880-af5c-4d8b-b22d-a02c2104bbe7": {
+      "supplier_id": "754e3880-af5c-4d8b-b22d-a02c2104bbe7",
+      "transaction_amount": 7.597334667,
+      "transaction_count": 175,
+      "updated_at": "2025-11-19T01:11:40.681Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1642ec0f-0607-47c7-aa7f-13669c85b00f": {
+      "supplier_id": "1642ec0f-0607-47c7-aa7f-13669c85b00f",
+      "transaction_amount": 0.173333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_69073fc9-0161-47b7-a039-1b9aa5ff92db": {
+      "supplier_id": "69073fc9-0161-47b7-a039-1b9aa5ff92db",
+      "transaction_amount": 0.593333333,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_7e775978-e5f2-472f-bf6e-95b4f69ed201": {
+      "supplier_id": "7e775978-e5f2-472f-bf6e-95b4f69ed201",
+      "transaction_amount": 10.21456867,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_1138102642": {
+      "supplier_id": "ce310349-79e5-4050-bf74-05bc67f9dfc7",
+      "business_number": "1138102642",
+      "transaction_amount": 0.085333333,
+      "transaction_count": 1,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_7955500597": {
+      "supplier_id": "5069d785-7bd7-447e-b4c3-904080f8e4b1",
+      "business_number": "7955500597",
+      "transaction_amount": 1.3042,
+      "transaction_count": 27,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_25be0fb3-690e-4047-8c7f-e3d3d9c493f1": {
+      "supplier_id": "25be0fb3-690e-4047-8c7f-e3d3d9c493f1",
+      "transaction_amount": 4.886866667,
+      "transaction_count": 19,
+      "updated_at": "2025-11-19T01:11:40.681Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_88f8d3d6-d5ee-4105-a769-cc05dd785a64": {
+      "supplier_id": "88f8d3d6-d5ee-4105-a769-cc05dd785a64",
+      "transaction_amount": 0.673066667,
+      "transaction_count": 14,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6098160600": {
+      "supplier_id": "59e775a3-b3f6-4b88-ae76-b10e035191b4",
+      "business_number": "6098160600",
+      "transaction_amount": 62.169232,
+      "transaction_count": 7,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_ea7534ac-08a4-4a9f-a4b5-d848c3424c56": {
+      "supplier_id": "ea7534ac-08a4-4a9f-a4b5-d848c3424c56",
+      "transaction_amount": 0.046666667,
+      "transaction_count": 2,
+      "updated_at": "2025-11-19T01:11:40.682Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6063278345": {
+      "supplier_id": "30b2d371-46f5-412f-b4e5-008f0e28f386",
+      "business_number": "6063278345",
+      "transaction_amount": 0.119246667,
+      "transaction_count": 10,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6050572911": {
+      "supplier_id": "457cfed9-b94d-4f85-9101-3d5db8ceb28b",
+      "business_number": "6050572911",
+      "transaction_amount": 0.25292,
+      "transaction_count": 9,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    },
+    "transaction_data_6178195508": {
+      "supplier_id": "9cd0a82c-b12a-4b6b-96a9-43e2d55045b9",
+      "business_number": "6178195508",
+      "transaction_amount": 0.329333333,
+      "transaction_count": 12,
+      "updated_at": "2025-11-19T02:19:29.397Z",
+      "updated_by": "관리자"
+    }
+  },
+  "timestamp": "2026-01-15T04:51:55.459Z"
+}
