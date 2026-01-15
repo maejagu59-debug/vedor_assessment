@@ -451,32 +451,14 @@ const EvaluationSection: React.FC<EvaluationSectionProps> = ({ evaluation, allEv
               <div className="mb-6 p-5 bg-white rounded-xl border-2 border-gray-200">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm font-semibold text-gray-700">원점수 (평가 결과)</span>
-                  <button
-                    onClick={() => setShowSafetyDetails(!showSafetyDetails)}
-                    className="text-3xl font-bold text-blue-600 hover:text-blue-800 cursor-pointer transition-colors"
-                    title="클릭하여 안전보건 질의내용 보기"
-                  >
+                  <span className="text-3xl font-bold text-blue-600">
                     {evaluation.final_score?.toFixed(1)}점
-                  </button>
+                  </span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-gray-600">적격 기준</span>
                   <span className="text-base font-semibold text-gray-700">60점 이상</span>
                 </div>
-                {showSafetyDetails && (
-                  <div className="mt-4 pt-4 border-t border-gray-200">
-                    <div className="flex justify-between items-center mb-3">
-                      <h6 className="text-sm font-bold text-gray-900">안전보건 질의응답 상세</h6>
-                      <button
-                        onClick={() => setShowSafetyDetails(false)}
-                        className="text-sm text-gray-500 hover:text-gray-700"
-                      >
-                        ✕ 닫기
-                      </button>
-                    </div>
-                    <SafetyQuestionnaireDetails evaluation={evaluation} />
-                  </div>
-                )}
               </div>
 
               {/* 1. 안전보건관리체제 및 법규 준수 분석 */}
@@ -612,6 +594,37 @@ const EvaluationSection: React.FC<EvaluationSectionProps> = ({ evaluation, allEv
                     </div>
                   </div>
                 )}
+                
+                {/* 세부평가 항목보기 버튼 */}
+                <div className="mt-6">
+                  <button
+                    onClick={() => setShowSafetyDetails(!showSafetyDetails)}
+                    className="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>{showSafetyDetails ? '세부평가 항목 닫기' : '세부평가 항목보기'}</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${showSafetyDetails ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  
+                  {showSafetyDetails && (
+                    <div className="mt-4 p-6 bg-white rounded-xl border-2 border-gray-200">
+                      <div className="flex justify-between items-center mb-4">
+                        <h6 className="text-base font-bold text-gray-900">안전보건관리질의서 세부평가</h6>
+                        <span className="text-sm text-gray-500">평가점수, 평가항목, 평가기준</span>
+                      </div>
+                      <SafetyQuestionnaireDetails evaluation={evaluation} />
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
