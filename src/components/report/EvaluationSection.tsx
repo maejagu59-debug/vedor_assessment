@@ -3,6 +3,7 @@ import { EvaluationData } from '../../types';
 import { EvaluationAnalysisGenerator } from '../../utils/EvaluationAnalysisGenerator';
 import { useApp } from '../../contexts/AppContext';
 import SustainabilityDetailsView from './SustainabilityDetailsView';
+import StabilityDetailsView from './StabilityDetailsView';
 
 interface EvaluationSectionProps {
   evaluation: EvaluationData;
@@ -532,37 +533,14 @@ const EvaluationSection: React.FC<EvaluationSectionProps> = ({ evaluation, allEv
           <div className="mt-4 space-y-4">
             {/* 안정성 세부 항목 */}
             {evaluation.stability_details && typeof evaluation.stability_details === 'object' && (
-              <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <h5 className="text-sm font-medium text-gray-900 mb-3">안정성 세부 항목</h5>
-                <div className="space-y-2">
-                  {Object.entries(evaluation.stability_details).map(([key, value]) => {
-                    if (key === 'conversion' || key === 'totalScore') return null;
-                    const score = Number(value);
-                    const labels: Record<string, string> = {
-                      debt: '부채 관리',
-                      equity: '자기자본',
-                      expertise: '전문성',
-                      liquidity: '유동성',
-                    };
-                    return (
-                      <div key={key} className="flex items-center justify-between">
-                        <span className="text-xs text-gray-700">{labels[key] || key}</span>
-                        <div className="flex items-center gap-2">
-                          <div className="w-24 bg-gray-200 rounded-full h-2">
-                            <div
-                              className="h-2 rounded-full"
-                              style={{ width: `${(score / 5) * 100}%`, backgroundColor: '#0085FF' }}
-                            />
-                          </div>
-                          <span className="text-xs font-semibold text-gray-900 w-8 text-right">
-                            {score.toFixed(1)}
-                          </span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+              <StabilityDetailsView 
+                details={{
+                  debt: Number(evaluation.stability_details.debt) || 0,
+                  equity: Number(evaluation.stability_details.equity) || 0,
+                  expertise: Number(evaluation.stability_details.expertise) || 0,
+                  liquidity: Number(evaluation.stability_details.liquidity) || 0
+                }}
+              />
             )}
 
             {/* 지속가능성 세부 항목 */}
