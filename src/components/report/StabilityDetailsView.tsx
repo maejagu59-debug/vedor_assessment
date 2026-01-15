@@ -122,16 +122,6 @@ const StabilityDetailsView: React.FC<StabilityDetailsViewProps> = ({ details }) 
             </div>
           </div>
         ))}
-        
-        {/* 총점 표시 */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-          <div className="flex justify-between items-center">
-            <span className="text-sm font-bold text-blue-900">총 점수</span>
-            <span className="text-lg font-bold text-blue-900">
-              {(details.expertise + details.liquidity + details.debt + details.equity) * 5}점 (환산: {Math.round((details.expertise + details.liquidity + details.debt + details.equity) * 5 * 0.1)}점 / 10점)
-            </span>
-          </div>
-        </div>
       </div>
     </div>
   );
