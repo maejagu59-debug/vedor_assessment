@@ -23,13 +23,16 @@ dist-ssr
 *.sln
 *.sw?
 
-# Data files (exclude sensitive supplier data)
-*.csv
-*.xlsx
-*.xls
+# Data files (exclude sensitive supplier data in root)
+/*.csv
+/*.xlsx
+/*.xls
 
 # Keep sample data for reference
 !sample-data.csv
+
+# Allow CSV files in public folder (needed for deployment)
+!public/*.csv
 
 # Files with tokens (security)
 upload-to-github-final.bat
