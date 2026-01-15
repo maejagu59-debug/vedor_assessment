@@ -78,6 +78,7 @@ export class CSVParser {
         // 평가 데이터
         safety_questionnaire_score: parseNumber(rawRow.safety_questionnaire_score),
         safety_questionnaire_grade: String(rawRow.safety_questionnaire_grade || 'N/A'),
+        safety_questionnaire_responses: rawRow.safety_questionnaire_responses ? String(rawRow.safety_questionnaire_responses) : undefined,
         hq_employees: parseNumber(rawRow.hq_employees),
         bct_office_employees: parseNumber(rawRow.bct_office_employees),
         

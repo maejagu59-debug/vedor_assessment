@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useApp } from '../../contexts/AppContext';
 import { SupplierGroupManager, SupplierGroupOverride } from '../../utils/SupplierGroupManager';
 

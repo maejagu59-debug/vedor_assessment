@@ -19,7 +19,7 @@ export interface SupplierRawData {
   // 평가 데이터
   safety_questionnaire_score: number;
   safety_questionnaire_grade: string;
-  safety_questionnaire_responses: string; // JSON 문자열
+  safety_questionnaire_responses?: string; // JSON 문자열 (선택적)
   hq_employees: number;
   bct_office_employees: number;
   
