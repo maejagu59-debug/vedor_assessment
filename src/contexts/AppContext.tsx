@@ -6,6 +6,7 @@ import { SuppliersParser, SupplierListData } from '../utils/SuppliersParser';
 import { FinancialCalculator } from '../utils/FinancialCalculator';
 import { AnalysisTextGenerator } from '../utils/AnalysisTextGenerator';
 import { SupplierGroupManager } from '../utils/SupplierGroupManager';
+import { DataExporter } from '../utils/DataExporter';
 
 interface AppContextType extends AppState {
   uploadSupplierCSV: (file: File) => Promise<void>;
@@ -51,6 +52,9 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     const loadInitialData = async () => {
       try {
         setState(prev => ({ ...prev, isLoading: true }));
+
+        // 초기 데이터 로드 (localStorage가 비어있을 때만)
+        await DataExporter.loadInitialData();
 
         // 공급업체 목록 로드 (suppliers)
         const suppliersListResponse = await fetch('/suppliers-export-2025-11-17_08-41-15.csv');

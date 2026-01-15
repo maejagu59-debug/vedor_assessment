@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useApp } from '../contexts/AppContext';
 import TransactionDataManager from '../components/admin/TransactionDataManager';
 import SupplierGroupEditor from '../components/admin/SupplierGroupEditor';
+import { DataExporter } from '../utils/DataExporter';
 
 type TabType = 'transaction' | 'groups';
 
@@ -21,6 +22,10 @@ const AdminPage: React.FC = () => {
     navigate('/');
   };
 
+  const handleExportData = () => {
+    DataExporter.downloadAsJSON();
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* 헤더 */}
@@ -32,6 +37,13 @@ const AdminPage: React.FC = () => {
               <p className="text-sm text-gray-500 mt-1">공급업체 데이터 관리</p>
             </div>
             <div className="flex space-x-4">
+              <button
+                onClick={handleExportData}
+                className="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700"
+                title="거래 데이터와 그룹 설정을 JSON 파일로 내보내기"
+              >
+                📥 데이터 내보내기
+              </button>
               <button
                 onClick={() => navigate('/')}
                 className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
