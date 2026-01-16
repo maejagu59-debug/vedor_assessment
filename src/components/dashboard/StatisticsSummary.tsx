@@ -69,8 +69,16 @@ const StatisticsSummary: React.FC = () => {
                     </dt>
                     <dd>
                       {card.detailText ? (
-                        <div className="text-sm font-medium text-gray-900">
-                          {card.detailText}
+                        <div>
+                          <div className="flex items-baseline">
+                            <div className="text-2xl font-semibold text-gray-900">
+                              76
+                            </div>
+                            <div className="ml-2 text-sm text-gray-500">개사</div>
+                          </div>
+                          <div className="text-xs text-gray-500 mt-1">
+                            (승인 공급업체 71개사, 보류 공급업체 5개사)
+                          </div>
                         </div>
                       ) : (
                         <div className="flex items-baseline">
