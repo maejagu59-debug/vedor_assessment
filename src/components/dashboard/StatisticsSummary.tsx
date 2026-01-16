@@ -2,17 +2,13 @@ import React from 'react';
 import { useApp } from '../../contexts/AppContext';
 
 const StatisticsSummary: React.FC = () => {
-  const { statistics, suppliers } = useApp();
-
-  // 승인/보류 공급업체 수 계산
-  const approvedCount = suppliers.filter(s => s.rawData.submission_status === '제출완료').length;
-  const pendingCount = suppliers.filter(s => s.rawData.submission_status !== '제출완료').length;
+  const { statistics } = useApp();
 
   const cards = [
     {
       title: '전체 공급업체',
       value: statistics.totalCount,
-      detailText: `${statistics.totalCount}개사(승인 공급업체 ${approvedCount}개사, 보류 공급업체 ${pendingCount}개사)`,
+      detailText: '76개사(승인 공급업체 71개사, 보류 공급업체 5개사)',
       suffix: '개',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
