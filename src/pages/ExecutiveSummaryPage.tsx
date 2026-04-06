@@ -48,19 +48,19 @@ const GROUP_NAMES: Record<string, string> = {
   G: 'Group G - 소모품/일반',
 };
 
-// 승인보류 업체 (회사명 기준)
-const SUSPENDED_SUPPLIERS: { name: string; reason: string }[] = [
-  { name: '(주)현대지게차종합건설', reason: '서비스 퀄리티 저하' },
-  { name: '경남고속뉴부산관광', reason: '서비스 중도해지' },
-  { name: '용신해운', reason: '중대재해 발생으로 인한 폐업' },
+// 승인보류 업체 (정확한 회사명 + 그룹 + 사유)
+const SUSPENDED_SUPPLIERS: { name: string; group: string; reason: string }[] = [
+  { name: '(주)현대지게차종합건설', group: 'B', reason: '서비스 퀄리티 저하' },
+  { name: '경남고속뉴부산관광', group: 'E3', reason: '서비스 중도해지' },
+  { name: '(주)용신', group: 'E2', reason: '중대재해 발생으로 인한 폐업' },
 ];
 
-function isSuspended(supplierName: string): boolean {
-  return SUSPENDED_SUPPLIERS.some(s => supplierName.includes(s.name) || s.name.includes(supplierName));
+function isSuspended(supplierName: string, groupKey: string): boolean {
+  return SUSPENDED_SUPPLIERS.some(s => s.name === supplierName && s.group === groupKey);
 }
 
 function getSuspendedReason(supplierName: string): string {
-  const found = SUSPENDED_SUPPLIERS.find(s => supplierName.includes(s.name) || s.name.includes(supplierName));
+  const found = SUSPENDED_SUPPLIERS.find(s => s.name === supplierName);
   return found?.reason ?? '';
 }
 
@@ -148,8 +148,8 @@ function computeGroupSummaries(evaluations: EvaluationData[]): GroupSummary[] {
     .filter(g => groupMap[g] && groupMap[g].length > 0)
     .map(g => {
       const all = groupMap[g];
-      const suspended = all.filter(e => isSuspended(e.supplier_name));
-      const active = all.filter(e => !isSuspended(e.supplier_name));
+      const suspended = all.filter(e => isSuspended(e.supplier_name, g));
+      const active = all.filter(e => !isSuspended(e.supplier_name, g));
 
       const sorted = [...active].sort((a, b) => b.finalConvertedScore - a.finalConvertedScore);
       const topSupplier = sorted[0] ?? null;
@@ -177,6 +177,22 @@ function computeGroupSummaries(evaluations: EvaluationData[]): GroupSummary[] {
 
       return { groupKey: g, suppliers: active, suspendedSuppliers: suspended, topSupplier, weakItems };
     });
+}
+
+// ─── Remark 자동 생성 ────────────────────────────────────────────────────────
+
+function generateRemark(summary: GroupSummary): string {
+  const { groupKey, suppliers, suspendedSuppliers, topSupplier, weakItems } = summary;
+  const total = suppliers.length + suspendedSuppliers.length;
+  const topName = topSupplier?.supplier_name ?? '-';
+  const weakTop = weakItems[0]?.label ?? null;
+  const suspendedNames = suspendedSuppliers.map(e => e.supplier_name).join(', ');
+
+  let remark = `${GROUP_NAMES[groupKey] ?? groupKey} 평가 결과, 총 ${total}개사 중 ${suppliers.length}개사가 승인되었으며 `;
+  remark += `${topName}이(가) 최종 변환점수 ${topSupplier?.finalConvertedScore.toFixed(1) ?? '-'}점으로 우수협력사로 선정됨. `;
+  if (weakTop) remark += `그룹 전반적으로 '${weakTop}' 항목의 평균 달성률이 가장 낮아 집중 관리가 필요함. `;
+  if (suspendedSuppliers.length > 0) remark += `${suspendedNames}은(는) 사유 발생으로 승인보류 처리함.`;
+  return remark.trim();
 }
 
 // ─── 결재 도장 컴포넌트 ───────────────────────────────────────────────────────
@@ -246,6 +262,7 @@ const GroupCard: React.FC<{ summary: GroupSummary }> = ({ summary }) => {
   const avgScore = suppliers.length > 0
     ? suppliers.reduce((s, e) => s + e.finalConvertedScore, 0) / suppliers.length
     : 0;
+  const remark = generateRemark(summary);
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
@@ -345,6 +362,14 @@ const GroupCard: React.FC<{ summary: GroupSummary }> = ({ summary }) => {
             </div>
           )}
         </div>
+      </div>
+
+      {/* Remark */}
+      <div className="px-6 py-3 border-t border-gray-100 bg-gray-50">
+        <p className="text-xs text-gray-500">
+          <span className="font-semibold text-gray-600 mr-1">📝 Remark</span>
+          {remark}
+        </p>
       </div>
     </div>
   );
