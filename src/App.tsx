@@ -3,6 +3,7 @@ import { AppProvider } from './contexts/AppContext'
 import DashboardPage from './pages/DashboardPage'
 import ReportPage from './pages/ReportPage'
 import AdminPage from './pages/AdminPage'
+import ExecutiveSummaryPage from './pages/ExecutiveSummaryPage'
 import ErrorBoundary from './components/ErrorBoundary'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<DashboardPage />} />
             <Route path="/report/:id" element={<ReportPage />} />
             <Route path="/admin" element={<AdminPage />} />
+            <Route path="/executive-summary" element={<ExecutiveSummaryPage />} />
           </Routes>
         </Router>
       </AppProvider>

@@ -19,6 +19,7 @@ interface AppContextType extends AppState {
   logout: () => void;
   updateSupplierAnalysis: (id: string, analysis: Partial<AnalysisTexts>) => void;
   suppliersList: SupplierListData[];
+  evaluations: EvaluationData[];
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -414,6 +415,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     logout,
     updateSupplierAnalysis,
     suppliersList,
+    evaluations,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
