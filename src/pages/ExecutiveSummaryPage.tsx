@@ -48,20 +48,21 @@ const GROUP_NAMES: Record<string, string> = {
   G: 'Group G - 소모품/일반',
 };
 
-// 승인보류 업체 (정확한 회사명 + 그룹 + 사유)
+// 승인보류 업체 (정확한 회사명 + 그룹 + 사유) - 데이터 유무와 무관하게 항상 표시
 const SUSPENDED_SUPPLIERS: { name: string; group: string; reason: string }[] = [
   { name: '(주)현대지게차종합건설', group: 'B', reason: '서비스 퀄리티 저하' },
   { name: '경남고속뉴부산관광', group: 'E3', reason: '서비스 중도해지' },
   { name: '(주)용신', group: 'E2', reason: '중대재해 발생으로 인한 폐업' },
 ];
 
-function isSuspended(supplierName: string, groupKey: string): boolean {
-  return SUSPENDED_SUPPLIERS.some(s => s.name === supplierName && s.group === groupKey);
+// 해당 그룹의 승인보류 목록 반환 (항상 표시)
+function getSuspendedForGroup(groupKey: string): { name: string; reason: string }[] {
+  return SUSPENDED_SUPPLIERS.filter(s => s.group === groupKey);
 }
 
-function getSuspendedReason(supplierName: string): string {
-  const found = SUSPENDED_SUPPLIERS.find(s => s.name === supplierName);
-  return found?.reason ?? '';
+// 데이터 기반 승인보류 여부 (CSV에 있는 경우 제외 처리)
+function isSuspendedInData(supplierName: string, groupKey: string): boolean {
+  return SUSPENDED_SUPPLIERS.some(s => s.name === supplierName && s.group === groupKey);
 }
 
 // 결재자 정보
@@ -85,6 +86,7 @@ interface GroupSummary {
   groupKey: string;
   suppliers: SupplierWithScore[];
   suspendedSuppliers: SupplierWithScore[];
+  hardcodedSuspended: { name: string; reason: string }[];
   topSupplier: SupplierWithScore | null;
   weakItems: { id: string; label: string; avgRatio: number }[];
 }
@@ -148,8 +150,8 @@ function computeGroupSummaries(evaluations: EvaluationData[]): GroupSummary[] {
     .filter(g => groupMap[g] && groupMap[g].length > 0)
     .map(g => {
       const all = groupMap[g];
-      const suspended = all.filter(e => isSuspended(e.supplier_name, g));
-      const active = all.filter(e => !isSuspended(e.supplier_name, g));
+      const suspended = all.filter(e => isSuspendedInData(e.supplier_name, g));
+      const active = all.filter(e => !isSuspendedInData(e.supplier_name, g));
 
       const sorted = [...active].sort((a, b) => b.finalConvertedScore - a.finalConvertedScore);
       const topSupplier = sorted[0] ?? null;
@@ -175,23 +177,25 @@ function computeGroupSummaries(evaluations: EvaluationData[]): GroupSummary[] {
         .sort((a, b) => a.avgRatio - b.avgRatio)
         .slice(0, 5);
 
-      return { groupKey: g, suppliers: active, suspendedSuppliers: suspended, topSupplier, weakItems };
+      return { groupKey: g, suppliers: active, suspendedSuppliers: suspended, hardcodedSuspended: getSuspendedForGroup(g), topSupplier, weakItems };
     });
 }
 
 // ─── Remark 자동 생성 ────────────────────────────────────────────────────────
 
 function generateRemark(summary: GroupSummary): string {
-  const { groupKey, suppliers, suspendedSuppliers, topSupplier, weakItems } = summary;
-  const total = suppliers.length + suspendedSuppliers.length;
+  const { groupKey, suppliers, hardcodedSuspended, topSupplier, weakItems } = summary;
+  const total = suppliers.length + hardcodedSuspended.length;
   const topName = topSupplier?.supplier_name ?? '-';
   const weakTop = weakItems[0]?.label ?? null;
-  const suspendedNames = suspendedSuppliers.map(e => e.supplier_name).join(', ');
 
   let remark = `${GROUP_NAMES[groupKey] ?? groupKey} 평가 결과, 총 ${total}개사 중 ${suppliers.length}개사가 승인되었으며 `;
   remark += `${topName}이(가) 최종 변환점수 ${topSupplier?.finalConvertedScore.toFixed(1) ?? '-'}점으로 우수협력사로 선정됨. `;
   if (weakTop) remark += `그룹 전반적으로 '${weakTop}' 항목의 평균 달성률이 가장 낮아 집중 관리가 필요함. `;
-  if (suspendedSuppliers.length > 0) remark += `${suspendedNames}은(는) 사유 발생으로 승인보류 처리함.`;
+  if (hardcodedSuspended.length > 0) {
+    const suspendedText = hardcodedSuspended.map(s => `${s.name} (${s.reason})`).join(', ');
+    remark += `승인 보류 업체 - ${suspendedText}.`;
+  }
   return remark.trim();
 }
 
@@ -257,7 +261,7 @@ const KpiCard: React.FC<{ label: string; value: string; color: string }> = ({ la
 // ─── 그룹 카드 ───────────────────────────────────────────────────────────────
 
 const GroupCard: React.FC<{ summary: GroupSummary }> = ({ summary }) => {
-  const { groupKey, suppliers, suspendedSuppliers, topSupplier, weakItems } = summary;
+  const { groupKey, suppliers, hardcodedSuspended, topSupplier, weakItems } = summary;
   const approved = suppliers.filter(e => e !== topSupplier);
   const avgScore = suppliers.length > 0
     ? suppliers.reduce((s, e) => s + e.finalConvertedScore, 0) / suppliers.length
@@ -272,11 +276,11 @@ const GroupCard: React.FC<{ summary: GroupSummary }> = ({ summary }) => {
           <span className="text-base font-semibold text-gray-800">{GROUP_NAMES[groupKey] ?? groupKey}</span>
         </div>
         <div className="text-sm text-gray-500 flex items-center gap-3">
-          <span>총 <span className="font-semibold text-gray-800">{suppliers.length + suspendedSuppliers.length}</span>개 업체</span>
+          <span>총 <span className="font-semibold text-gray-800">{suppliers.length + hardcodedSuspended.length}</span>개 업체</span>
           <span>평균 변환점수 <span className="font-semibold text-gray-800">{avgScore.toFixed(1)}점</span></span>
-          {suspendedSuppliers.length > 0 && (
+          {hardcodedSuspended.length > 0 && (
             <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 text-xs font-semibold">
-              승인보류 {suspendedSuppliers.length}개
+              승인보류 {hardcodedSuspended.length}개
             </span>
           )}
         </div>
@@ -318,17 +322,14 @@ const GroupCard: React.FC<{ summary: GroupSummary }> = ({ summary }) => {
                 </div>
               ))}
           </div>
-          {suspendedSuppliers.length > 0 && (
+          {hardcodedSuspended.length > 0 && (
             <div className="mt-3">
-              <p className="text-xs font-semibold text-orange-600 mb-1.5">⏸ 승인보류 ({suspendedSuppliers.length}개)</p>
+              <p className="text-xs font-semibold text-orange-600 mb-1.5">⏸ 승인보류 ({hardcodedSuspended.length}개)</p>
               <div className="space-y-1.5">
-                {suspendedSuppliers.map(e => (
-                  <div key={e.id} className="rounded-lg border border-orange-200 bg-orange-50 px-3 py-1.5">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-orange-800 font-medium truncate max-w-[140px]">{e.supplier_name}</span>
-                      <span className="text-xs text-orange-500 ml-1 shrink-0">{e.finalConvertedScore.toFixed(1)}점</span>
-                    </div>
-                    <p className="text-xs text-orange-600 mt-0.5">{getSuspendedReason(e.supplier_name)}</p>
+                {hardcodedSuspended.map(s => (
+                  <div key={s.name} className="rounded-lg border border-orange-200 bg-orange-50 px-3 py-1.5">
+                    <span className="text-sm text-orange-800 font-medium">{s.name}</span>
+                    <p className="text-xs text-orange-600 mt-0.5">{s.reason}</p>
                   </div>
                 ))}
               </div>
@@ -427,7 +428,7 @@ const ExecutiveSummaryPage: React.FC = () => {
           <KpiCard label="총 평가 업체" value={`${totalActive + totalSuspended}개`} color="indigo" />
           <KpiCard label="우수협력사" value={`${excellentCount}개`} color="green" />
           <KpiCard label="승인공급업체" value={`${totalActive - excellentCount}개`} color="gray" />
-          <KpiCard label="승인보류" value={`${totalSuspended}개`} color="orange" />
+          <KpiCard label="승인보류" value="3개" color="orange" />
         </div>
 
         {/* 그룹별 카드 */}
